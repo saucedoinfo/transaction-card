@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Transaction Card</title>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--black: #000000;
+				--blue: #6ab8ec;
+				--gray: #444444;
+				--white: #ffffff;
+				--lgray: #e6e6e6;
+				--green: #27a844;
+			}
+
+			body {
+				width: 100%;
+				height: 100vh;
+				background-color: var(--lgray);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.transaction_card {
+				width: 600px;
+				height: 400px;
+				background-color: #fff;
+				border-radius: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				box-shadow: 4px 4px 5px 1px rgba(136, 136, 136, 0.5);
+			}
+
+			.transaction_card-top {
+				width: 100%;
+				height: 100px;
+				background-color: #444444;
+				border-radius: 10px 10px 0px 0px;
+				display: flex;
+				align-items: center;
+			}
+
+			.transaction_card-bottom {
+				width: 100%;
+				height: 60px;
+				background-color: #444444;
+				border-radius: 0px 0px 10px 10px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+
+			.transaction_card-top_title,
+			.transaction_card-top_title-sms {
+				color: var(--white);
+				font-size: 45px;
+				font-family: "Roboto", sans-serif;
+				font-weight: 500;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+			}
+
+			.transaction_card-top_title-sms {
+				color: var(--blue);
+				font-weight: bold;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+
+			.fa-fire-extinguisher {
+				color: var(--blue);
+				font-size: 45px;
+
+				padding-left: 50px;
+				margin-right: 10px;
+			}
+
+			.fa-check {
+				color: var(--white);
+				font-size: 20px;
+				padding-right: 10px;
+			}
+
+			.transaction_card-center {
+				padding-left: 60px;
+				padding-right: 60px;
+				padding-top: 15px;
+				padding-bottom: 10px;
+				height: 225px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.transaction_card-center_fecha {
+				font-size: 18px;
+				font-family: "Roboto", sans-serif;
+				font-weight: 500;
+				text-decoration: underline;
+			}
+
+			.transaction_card-center_id,
+			.transaction_card-center_estado,
+			.transaction_card-center_codigo {
+				font-family: "Roboto", sans-serif;
+				font-weight: 100;
+				font-size: 16px;
+				color: var(--gray);
+			}
+
+			.transaction_card-center_check-container {
+				display: flex;
+				justify-content: center;
+                align-items: center;
+                margin: 10px;
+			}
+
+			.out_id,
+			.out_estado,
+			.out_codigo {
+				font-family: "Roboto", sans-serif;
+				font-weight: 500;
+				font-size: 18px;
+				color: var(--black);
+			}
+
+			.transaction_card-center_check-container_buttom {
+				color: var(--white);
+				background-color: var(--green);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+				border-radius: 20px;
+				text-transform: capitalize;
+				font-family: "Roboto", sans-serif;
+				font-weight: bold;
+				font-size: 15px;
+				width: 150px;
+				height: 15px;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+
+			.transaction_card-bottom_empresa {
+				margin-right: 50px;
+				font-family: "Roboto", sans-serif;
+				font-size: 20px;
+				color: var(--white);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="transaction_card">
+			<div class="transaction_card-top">
+				<i class="fas fa-fire-extinguisher"></i>
+				<div class="transaction_card-top_title">
+					extin<spam class="transaction_card-top_title-sms">sms</spam>
+				</div>
+			</div>
+			<div class="transaction_card-center">
+				<div class="transaction_card-center_fecha">
+					Fecha: 2020-09-11 20:06:21
+				</div>
+				<div class="transaction_card-center_id">
+					ID Paquete: <spam class="out_id">65-84187-45</spam>
+				</div>
+				<div class="transaction_card-center_estado">
+					Tipo de estado: <spam class="out_estado">Pendiente</spam>
+				</div>
+				<div class="transaction_card-center_codigo">
+					Codigo de confirmacion: <spam class="out_codigo">29685437</spam>
+				</div>
+				<div class="transaction_card-center_check-container">
+					<div class="transaction_card-center_check-container_buttom">
+						<i class="fas fa-check"></i> <spam class="check">aprobado</spam>
+					</div>
+				</div>
+			</div>
+			<div class="transaction_card-bottom">
+				<div class="transaction_card-bottom_empresa">Sigex Evolution SMS.</div>
+			</div>
+		</div>
+	</body>
+</html>
